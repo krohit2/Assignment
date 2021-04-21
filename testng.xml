@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	
+	<parameter name="url" value="bgp-qa.gds-gov.tech"/> 
+	<parameter name="userName" value="public"/> 
+	<parameter name="password" value="Let$BeC001"/>  	
+	<parameter name="user" value="S1234567A"/> 
+	<parameter name="fullName" value="Tan Ah Kow"/> 
+	<parameter name="UEN" value="BGPQEDEMO"/>  
+	<parameter name="role" value="Acceptor"/>  
+
+  <test thread-count="5" name="Validation of Eligibility Section">
+   
+	  <parameter name="labelValues" value="Is the applicant registered in Singapore?;Is the applicant's group sales turnover less than or equal to S$100m or is the applicant's group employment size less than or equal to 200?;Does the applicant have at least 30% ;Is the ;Are "/>  
+	  <parameter name="eligibilityWarning" value="The applicant may not meet the eligibility criteria for this grant. Visit FAQ page for more information on other government grants."/>
+	  <parameter name="targetURL" value="https://www.gov.sg/#FAQ_1111145"/>
+	  <classes>
+	      <class name="com.org.sdet.selenium.com.org.sdet.selenium.TestCases">
+		      <methods>
+		      	    <include name="validateGrantOptions" />
+		      	    
+			 </methods>
+		 </class>
+	    </classes>
+  </test> 
+
+  <test thread-count="5" name="Validation of Contact Details Functionality">
+  
+	  <parameter name="name" value="Arvind"/>  
+	  <parameter name="jobTitle" value="Test Lead"/>
+	  <parameter name="email" value="test@test.com"/>
+	  <parameter name="phoneNumber" value="09876543"/>
+	  <parameter name="postalCode" value="6502320"/>
+	  
+	  
+	  <classes>
+	      <class name="com.org.sdet.selenium.com.org.sdet.selenium.TestCases">
+		      <methods>
+		      	    <include name="validateContactDetailsSection" />
+		      	    
+			 </methods>
+		 </class>
+	    </classes>
+  </test> 
+
+</suite> <!-- Suite -->
+
+
+	
+    

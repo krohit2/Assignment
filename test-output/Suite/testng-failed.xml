@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="password" value="Let$BeC001"/>
+  <parameter name="role" value="Acceptor"/>
+  <parameter name="fullName" value="Tan Ah Kow"/>
+  <parameter name="userName" value="public"/>
+  <parameter name="user" value="S1234567A"/>
+  <parameter name="url" value="bgp-qa.gds-gov.tech"/>
+  <parameter name="UEN" value="BGPQEDEMO"/>
+  <test name="Validation of Contact Details Functionality(failed)">
+    <parameter name="phoneNumber" value="09876543"/>
+    <parameter name="jobTitle" value="Test Lead"/>
+    <parameter name="postalCode" value="6502320"/>
+    <parameter name="name" value="Arvind"/>
+    <parameter name="email" value="test@test.com"/>
+    <classes>
+      <class name="com.org.sdet.selenium.com.org.sdet.selenium.TestCases">
+        <methods>
+          <include name="tearDown"/>
+          <include name="validateContactDetailsSection" invocation-numbers="0"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.org.sdet.selenium.com.org.sdet.selenium.TestCases -->
+    </classes>
+  </test> <!-- Validation of Contact Details Functionality(failed) -->
+</suite> <!-- Failed suite [Suite] -->
